@@ -1,0 +1,73 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 16px;
+    width: 100%;
+    
+  }
+  
+  .fi{
+    text-align: center;
+  }
+  
+  :host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #009ef7 ;
+}
+
+:host ::ng-deep  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: white;
+}
+
+  .spinnerbody{
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+  }
+
+  .button{
+    /*height: 35px;*/
+   /* background: linear-gradient(to right, #F6B668, #F48353);
+    background: linear-gradient(to right, #FCDF6B, #F99742);
+    background: linear-gradient(to right, #339CE9, #1D5BDF);
+    background: linear-gradient(to right, #1B1464);*/
+
+    background-color: #009ef7;
+
+
+    /*background-color: rgb(#F6B668,#F48353, #FCDF6B,#F99742, #339CE9,#1D5BDF,#1B1464 );*/
+    color: white;
+    margin: 7px;
+}
+
+.buttonNegro{
+    background-color: black;
+    color: white;
+}
+
+
+.circular--square {
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+  width: 40px;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+  
+  

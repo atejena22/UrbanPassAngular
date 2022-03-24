@@ -1,0 +1,139 @@
+<mat-toolbar class="navbar">
+  <!--mat-icon style="color: white;" (click)="isExpanded = !isExpanded">menu</!--mat-icon-->
+  <!--button style="background-color: transparent;" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" (click)="isExpanded = !isExpanded">
+        <mat-icon>menu</mat-icon>
+      </!--button-->
+  <img src="assets/urbanpasss.png" style="width: 60px; height: 60px" />
+  <img src="assets/urbanlogo.png" style="height: 35px" />
+  <span class="example-spacer"></span>
+
+  <!-------------espaciado etre la imagen y la letra-->
+  <!--span style="color: white;" class="titulo"><b>Steven Cepeda</b></!--span-->
+  <!--  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="color: white;">-->
+
+    <!--div-- class="d-flex align-items-center ms-1 ms-lg-3">
+      <!--begin::Menu- wrapper->
+      <div class="btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" [matMenuTriggerFor]="menuBad" data-kt-menu-placement="bottom-end">
+        <span class="svg-icon svg-icon-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="black"></path>
+            <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="black"></path>
+            <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="black"></path>
+            <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="black"></path>
+          </svg>
+        </span>
+    
+      </div>
+   
+    </div-->
+  <!--mat-menu-- #menuBad="matMenu">
+    <button mat-menu-item routerLink="/dashboard/notificaciones">
+      <mat-icon>notification_add</mat-icon>
+      <span>Crear Notificación</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+
+    <button mat-menu-item routerLink="/login">
+      <mat-icon>logout</mat-icon>
+      <span>Salir</span>
+    </button>
+  </!--mat-menu-->
+  &nbsp;
+  <!--img class="circular--square"
+    src="https://res.cloudinary.com/guayaquil19980/image/upload/v1644512482/urbanizaciones/user_u6hhrv.png" />
+  &nbsp;
+  <span style="color: white" class="titulo"><b>Steven Cepeda</b></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="color: white">
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu-- #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>manage_accounts</mat-icon>
+      <span>Mi Perfil</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span routerLink="/login">Salir</span>
+    </button>
+
+  </mat-menu-->
+
+
+    <!--begin::Menu wrapper-->
+    <div class="cursor-pointer symbol symbol-30px symbol-md-40px" [matMenuTriggerFor]="menu" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+      <img src="{{sImage+image}}" />
+<!--assets/media/avatars/300-1.jpg-->
+    </div>
+    &nbsp; &nbsp;
+    <span style="color: white;" class="titulo"><b>{{nombre}}&nbsp;{{apellido}}</b></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="color: white;">
+      <mat-icon>arrow_drop_down</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <!--begin::Menu item-->
+          <div class="menu-item px-3">
+            <div class="menu-content d-flex align-items-center px-3">
+              <!--begin::Avatar-->
+              <div class="symbol symbol-50px me-5">
+                <img alt="Logo" src="{{sImage+image}}" />
+              </div>
+              <!--end::Avatar-->
+              <!--begin::Username-->
+              <div class="d-flex flex-column">
+                <div class="fw-bolder d-flex align-items-center fs-5">{{nombre}}&nbsp;{{apellido}}
+                <!--span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</!--span--></div>
+                <a  class="fw-bold text-muted text-hover-primary fs-7">{{email}}</a>
+              </div>
+              <!--end::Username-->
+            </div>
+          </div>
+          <!--end::Menu item-->
+          <!--begin::Menu separator-->
+          <div class="separator my-2"></div>
+      
+          <!--button mat-menu-item>
+            <mat-icon>manage_accounts</mat-icon>
+            <span>Mi Perfil</span>
+          </!--button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button-- mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button-->
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span >Salir</span>
+          </button>
+          <div class="separator my-2"></div>
+        
+
+        </mat-menu>
+</mat-toolbar>
+
+
+
+<app-navbar ></app-navbar>
+
+<div class="wp-content">
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</div>

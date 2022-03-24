@@ -1,0 +1,59 @@
+
+  <!--app-urbanization></!--app-urbanization-->
+
+<!--<div class="container">-->
+  <div style="padding: 4em;">
+    <div class="card mb-3 mb-xl-5">
+      <span *ngIf="mostrar">
+        <button type="submit" class="btn btn-primary" style="margin: 7px;" id="kt_account_profile_details_submit" 
+           (click)="openDialogRegistrarUrbanizacion()">Nueva Urbanización</button>
+          <!--button mat-button color="primary" class="button" (click)="openDialogRegistrarUrbanizacion()">Nuevo Domicilio</!--button-->
+      </span> 
+
+      <h1 class="fw-bolder m-0 fs-3" style="text-align: center;" *ngIf="mostrar">Urbanizaciones Registradas</h1>
+
+    <div class="container" >
+        <div class="item" *ngFor="let item of listUrban">
+            <mat-card class="example-card" >
+                <mat-card-header>
+                  <!--div mat-card-avatar class="example-header-image"></!--div-->
+                  <mat-card-title  >{{item.urbanization1}}</mat-card-title>
+                  <mat-card-subtitle>{{item.city}} - {{item.country}}</mat-card-subtitle>
+                </mat-card-header>
+                <img src="{{sImage+item.image}}" height="250" width="300"  >
+                <br />
+                <mat-card-content >
+                  <br />
+                  <p><b>Nombre de Contacto:</b> <span>{{item.contactName}}</span></p>
+                  <p><b>Número de Contacto:</b><span>{{item.contactNumber}}</span></p>
+                  <p><b>Correo Electrónico:</b> <span>{{item.contactEmail}}</span></p>
+                  <p><b>Activo: </b><span>{{item.active}}</span></p>
+                  <p><b>Activo desde:</b> <span>{{item.activeFrom}}</span></p>
+                  <p><b>Activo Hasta:</b> <span>{{item.activeTo}}</span></p>
+                  <p><b>RUC:</b> <span>{{item.ruc}}</span></p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <div style="text-align: center;" *ngIf="mostrar">
+                    <!--button type="reset" class="btn btn-light btn-active-light-primary me-2"
+                    >Desactivar</!--button-->
+                  <!--button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit" (click)="setEditar(item)">Editar</!--button-->
+                  <button type="reset" class="btn btn-light btn-active-light-primary me-2"
+                  (click)="setEditar(item)">Editar</button>
+                </div>
+                  
+                  <!--button class="button" mat-button>Editar</!--button>
+                  <button-- class="buttonNegro" mat-button>Desactivar</button-->
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        
+
+        </div>  </div>  </div>  
+
+  
+
+  
+  
+
+
+

@@ -1,0 +1,62 @@
+    <div class="card-body py-3">
+        <!--begin::Table container-->
+        <div class="table-responsive">
+            <!--begin::Table-->
+            <table class="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4">
+                <!--begin::Table head-->
+                <thead>
+                    <tr class="fw-bolder text-muted">
+                        <th class="w-25px">
+                            Imagen
+                        </th>
+                        <th class="min-w">Usuario</th>
+                        <th class="min-w">Domicilio</th>
+                        <th class="min-w">Acceso</th>
+                    </tr>
+                </thead>
+                <!--end::Table head-->
+                <!--begin::Table body-->
+                <tbody>
+                    <tr *ngFor="let element of lstMaxUser">
+                        <td>
+                            <div class="symbol symbol-45px me-5">
+                                <img src="{{sImage+element.image}}" alt="" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                               
+                                <div class="d-flex justify-content-start flex-column">
+                                    <a style="text-decoration: none;" class="text-dark fw-bolder text-hover-primary fs-6">{{element.firstName}}&nbsp;{{ element.lastName}}</a>
+                                    <span class="text-muted fw-bold text-muted d-block fs-7">{{element.email}}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a style="text-decoration: none;" class="text-dark fw-bolder text-hover-primary d-block fs-6">Mz {{element.mz}}</a>
+                            <span class="text-muted fw-bold text-muted d-block fs-7">Villa {{element.villa}}</span>
+                        </td>
+                        <td class="text-end">
+                            <div class="d-flex flex-column w-100 me-2">
+                                <div class="d-flex flex-stack mb-2">
+                                    <span class="text-muted me-2 fs-7 fw-bold">{{element.counte}}%</span>
+                                </div>
+                                <div class="progress h-6px w-100">
+                                    <mat-progress-bar mode="determinate" value="{{element.counte}}"></mat-progress-bar>
+                                    <!--div-- class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></!--div-->
+                                </div>
+                            </div>
+                        </td>
+                      
+                    </tr>
+                 
+                
+                  
+                </tbody>
+                <!--end::Table body-->
+            </table>
+            <!--end::Table-->
+        </div>
+        <!--end::Table container-->
+    </div>
+  <!--app-piechart class="card card-xl-stretch mb-xl-8" chartColor="danger" chartHeight="200px" strokeColor="#cb1e46"></!--app-piechart-->

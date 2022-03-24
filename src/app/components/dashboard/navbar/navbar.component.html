@@ -1,0 +1,96 @@
+<div data-component="sidebar" >
+    <div class="sidebar" >
+
+        <ul class="list-group flex-column d-inline-block first-menu">
+
+            <li class="list-group-item pl-3 py-2" routerLink="/dashboard">
+
+                <mat-list-item style="color: white;">
+                    <mat-icon mat-list-icon >home</mat-icon>
+                    &nbsp;
+                    <span >Inicio</span>
+                </mat-list-item>
+
+            </li> <!-- /.list-group-item -->
+
+            <!--------------------------------------------------------------------------------------------------------------->
+
+            <li class="list-group-item pl-3 py-2" routerLink="/dashboard/notificaciones">
+
+                <mat-list-item style="color: white;">
+                    <mat-icon mat-list-icon >edit_notifications</mat-icon>
+                    &nbsp;
+                    <span >Notificaciones</span>
+                </mat-list-item>
+
+            </li> <!-- /.list-group-item -->
+
+            <!--------------------------------------------------------------------------------------------------------------->
+
+            <li class="list-group-item pl-3 py-2" routerLink="/dashboard/consultarcasa">
+
+                <mat-list-item style="color: white;" class="hola">
+                    <mat-icon mat-list-icon  >maps_home_work</mat-icon>
+                    &nbsp;
+                    <span>Domicilios</span>
+                </mat-list-item>
+            </li>
+
+
+            <!---------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+            <li class="list-group-item pl-3 py-2" routerLink="/dashboard/consultarurbanizacion">
+
+                <mat-list-item style="color: white;" class="hola">
+                    <mat-icon mat-list-icon >location_city</mat-icon>
+                    &nbsp;
+                    <span>Urbanizaciones</span>
+                </mat-list-item>
+            </li>
+
+
+            <!--------------------------------------------------------------------------------------------------------------------- /.list-group-item -->
+
+
+            <li class="list-group-item pl-3 py-2" routerLink="/dashboard/consultarusuario">
+
+                <mat-list-item style="color: white;" class="hola">
+                    <mat-icon mat-list-icon >person</mat-icon>
+                    &nbsp;
+                    <span>Usuarios</span>
+                </mat-list-item>
+
+            </li>
+
+            
+            <li class="list-group-item pl-3 py-2">
+                <mat-list-item style="color: white;" class="hola">
+                    <mat-icon mat-list-icon class="" routerLink="/dashboard/roles">description</mat-icon>
+                    &nbsp;
+                    <span>Reportes</span>
+                </mat-list-item>
+
+                <ul class="list-group flex-column d-inline-block submenu">
+                    <li class="list-group-item pl-4">
+                        <a routerLink="/dashboard/roles" class="">Generar Reportes</a>
+                    </li>          
+                </ul>
+            </li>
+
+
+            <!-------------------------------------------------------------------------------------------------------------->
+            <li class="list-group-item pl-3 py-2" routerLink="/dashboard/garita">
+                <mat-list-item style="color: white;" class="hola">
+                    <mat-icon mat-list-icon >local_taxi</mat-icon>
+                    &nbsp;
+                    <span>Garita</span>
+                </mat-list-item>
+
+            </li>
+
+
+        </ul> <!-- /.first-menu -->
+    </div> <!-- /.sidebar -->
+</div>

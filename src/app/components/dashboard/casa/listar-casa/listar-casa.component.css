@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+    text-align: center;
+  }
+
+  th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    text-align: center;
+  }
+  
+  .mat-form-field {
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .fi{
+    text-align: center;
+  }
+  
+  .spinnerbody{
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+  }
+
+  .button{
+    /*height: 35px;*/
+    /*background: linear-gradient(to right, #F6B668, #F48353);
+    background: linear-gradient(to right, #FCDF6B, #F99742);
+    background: linear-gradient(to right, #339CE9, #1D5BDF);
+    background: linear-gradient(to right, #1B1464);*/
+    background-color: #009ef7;
+
+    /*background-color: rgb(#F6B668,#F48353, #FCDF6B,#F99742, #339CE9,#1D5BDF,#1B1464 );*/
+    color: white;
+    margin: 7px;
+}
+
+.buttonNegro{
+    background-color: black;
+    color: white;
+}
+  
+  

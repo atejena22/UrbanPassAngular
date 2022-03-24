@@ -1,0 +1,88 @@
+table {
+    width: 100%;
+    /*height: 100%;*/
+    text-align: center;
+    border: 1px solid #000;
+  }
+
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .mat-form-field {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .th,.mat-header-cell,.mat-cell{
+    text-align: center;
+    font-size: xx-large;
+    color: black;
+  }
+
+  .matColumnDef,.mat-row, .mat-header-row, .mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    border-bottom-color: black;
+  }
+/**********************************************************/
+ /* .mat-column-houseId {
+    width: 5px;
+    border-right: 1px solid currentColor;
+    padding-right: 0px;
+  }
+
+  
+  .mat-column-urbanization1 {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+
+  .mat-column-userName {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+
+  .mat-column-mz {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+
+  .mat-column-villa {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+
+  .mat-column-phoneNumber {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+
+  .mat-column-notes {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+  .mat-column-fullAddress {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+
+  */
+  
+  

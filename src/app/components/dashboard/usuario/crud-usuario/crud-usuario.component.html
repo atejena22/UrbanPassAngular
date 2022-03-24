@@ -1,0 +1,245 @@
+<!--app-usuario></!--app-usuario-->
+
+<div style="padding: 4em;">
+  <div class="card mb-5 mb-xl-10">
+    <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+      data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+      <div class="card-title m-0">
+        <h3 class="fw-bolder m-0 fs-5">Registro de Usuario</h3>
+      </div>
+    </div>
+    <div id="kt_account_profile_details" class="collapse show">
+      <form [formGroup]="form">
+        <div class="card-body border-top p-9">
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label fw-bold fs-5">Imagen</label>
+            <div class="col-lg-8">
+             
+              <ngx-dropzone (change)="onSelect($event)">
+              <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+              <ngx-dropzone-image-preview  ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
+                <ngx-dropzone-label>({{ f.type }})</ngx-dropzone-label><!--{{ f.name }} -->
+              </ngx-dropzone-image-preview>
+            </ngx-dropzone>
+              <!--div-- class="image-input image-input-outline" data-kt-image-input="true">
+                <!--  [style.background-image]="'url(./assets/media/avatars/blank.png'"->
+                <div class="image-input image-input-outline" data-kt-image-input="true"
+                  style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                  <!--begin::Preview existing avatar->
+                  <div class="image-input-wrapper w-125px h-125px"
+                    style="background-image: url(assets/media/avatars/300-1.jpg)"></div>
+                  <!--end::Preview existing avatar->
+                  <!--begin::Label->
+                  <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                    <i class="bi bi-pencil-fill fs-7"></i>
+                    <!--begin::Inputs->
+                    <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+                    <input type="hidden" name="avatar_remove" />
+                    <!--end::Inputs->
+                  </label>
+                  <!--end::Label->
+                  <!--begin::Cancel->
+                  <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                    <i class="bi bi-x fs-2"></i>
+                  </span>
+                  <!--end::Cancel->
+                  <!--begin::Remove->
+                  <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                    <i class="bi bi-x fs-2"></i>
+                  </span>
+                  <!--end::Remove->
+                </div>
+              </!--div-->
+            </div>
+          </div>
+
+          <br />
+
+
+          <input type="hidden" formControlName="userId" />
+
+
+          <div class="row" *ngIf="rolUrbanizationHabilitar">
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-3 col-form-label required fw-bold fs-5">Rol</label>
+                <div class="col-lg-8 fv-row">
+                  <select class="form-select" id="autoSizingSelect" formControlName="roleID">
+                    <option selected >--- Seleccione el Rol ---</option>
+                    <option [value]="element.roleId" *ngFor="let element of listRol">{{element.roleName}}</option>
+                  </select>   
+                  <!--input type="number" class="form-control form-control-lg form-control-solid" placeholder="Rol"
+                    formControlName="roleID" id="rolActivo" /-->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-3 col-form-label required fw-bold fs-5">Urbanización</label>
+                <div class="col-lg-8 fv-row">
+                  <select class="form-select" id="autoSizingSelect" formControlName="urbanizationId">
+                    <option selected >--- Seleccione la Urbanización ---</option>
+                    <option [value]="element.urbanizationId" *ngFor="let element of listUrban">{{element.urbanization1}}</option>
+                  </select>   
+                  <!--input type="number" class="form-control form-control-lg form-control-solid" placeholder="Rol"
+                    formControlName="roleID" id="rolActivo" /-->
+                </div>
+              </div>
+            </div>
+            <!--div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label fw-bold fs-5">
+                  <span class="required">Correo Electrónico</span></label>
+                <div class="col-lg-8 fv-row">
+                  <input type="email" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Email" formControlName="email" />
+                </div>
+              </div>
+            </!--div-->
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-3 col-form-label required fw-bold fs-5">Nombre de Usuario</label>
+                <div class="col-lg-8 fv-row">
+                  <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Usuario"
+                    formControlName="userName" />
+                </div>
+              </div>
+            </div>
+            <!--div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span class="required">Contraseña</span></label>
+                <div class="col-lg-8 fv-row">
+                  <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Password"
+                     formControlName="password" />
+                </div>
+              </div>
+            </!--div-->
+
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label fw-bold fs-5">
+                  <span class="required">Correo Electrónico</span></label>
+                <div class="col-lg-8 fv-row">
+                  <input type="email" class="form-control form-control-lg form-control-solid" placeholder="Email"
+                    formControlName="email" />
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-3 col-form-label required fw-bold fs-5">Nombre</label>
+                <div class="col-lg-8 fv-row">
+                  <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Nombre"
+                    formControlName="firstName" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span class="required">Apellido</span></label>
+                <div class="col-lg-8 fv-row">
+                  <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Apellido"
+                    formControlName="lastName" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-3 col-form-label required fw-bold fs-5">Activo Desde</label>
+                <div class="col-lg-8 fv-row">
+                  <input type="datetime-local" class="form-control form-control-lg form-control-solid"
+                    formControlName="activeFrom" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span class="required">Activo Hasta</span></label>
+                <div class="col-lg-8 fv-row">
+                  <input type="datetime-local" class="form-control form-control-lg form-control-solid"
+                    formControlName="activeTo" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span class="required">Activo</span></label>
+                <div class="col-lg-8 d-flex align-items-center">
+                  <div class="form-check form-check-solid form-switch fv-row">
+                    <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing"
+                      formControlName="active" />
+                    <!--mat-slide-toggle [(ngModel)]="element.active" formControlName="active" ></!--mat-slide-toggle-->
+                    <!--checked="active"-->
+                    <!--label class="form-check-label" for="allowmarketing"></!--label-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-lg-6">
+              <div class="input-group mb-3">
+                <label class="col-lg-4 col-form-label required fw-bold fs-5">Pariente</label>
+                <div class="col-lg-8 fv-row">
+                  <input type="number" class="form-control form-control-lg form-control-solid" placeholder="Pariente"
+                    name="companySite" formControlName="userParentId" />
+                </div>
+              </div>
+            </div>
+          </div>
+                   <br />-->
+          </div>
+
+
+          <div class="card-footer d-flex justify-content-end py-6 px-5">
+            <!--routerLink="/dashboard/consultarusuario"-->
+            <button class="btn btn-light btn-active-light-primary me-2" [mat-dialog-close]="false">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit"
+              (click)="saveSettings()" [disabled]="form.invalid">Guardar Cambios</button>
+
+            <!--button type="button" class="btn btn-primary" [disabled]="isLoading" (click)="saveSettings()">
+            <ng-container *ngIf="!isLoading">Guardar Cambios</ng-container>
+            <ng-container *ngIf="isLoading">
+              <span clas="indicator-progress" [style.display]="'block'">
+                Please wait...{{ " " }}
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </ng-container>
+          </button-->
+          </div>
+
+        </div>
+      </form>
+
+
+
+
+    </div>
+  </div>

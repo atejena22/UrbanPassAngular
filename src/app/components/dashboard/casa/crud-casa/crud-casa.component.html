@@ -1,0 +1,220 @@
+<!--app-casa></!--app-casa-->
+
+<div style="padding: 4em">
+  <div class="card mb-5 mb-xl-10">
+    <div
+      class="card-header border-0 cursor-pointer"
+      role="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#kt_account_profile_details"
+      aria-expanded="true"
+      aria-controls="kt_account_profile_details"
+    >
+      <div class="card-title m-0">
+        <h3 class="fw-bolder m-0 fs-5">Registro de Domicilio</h3>
+      </div>
+    </div>
+    <div id="kt_account_profile_details" class="collapse show">
+      <form [formGroup]="form">
+        <div class="card-body border-top p-9">
+          <br />
+          <input type="hidden" formControlName="houseId" />
+
+          <div class="row mb-6" *ngIf="UrbanHabilitar">
+            <label class="col-lg-4 col-form-label required fw-bold fs-5"
+              >Urbanización</label
+            >
+            <div class="col-lg-8 fv-row">
+              <!--input type="number" class="form-control form-control-lg form-control-solid" 
+                  formControlName="urbanizationId" /-->
+              <!--select
+                class="form-select"
+                id="autoSizingSelect"
+                formControlName="urbanizationId"
+              >
+                <option selected >Seleccione la Urbanización</option>
+                <option
+                  [value]="element.urbanizationId"
+                  *ngFor="let element of listUrban"
+                >
+                  {{ element.urbanization1 }}
+                </option>
+              </!--select-->
+              <mat-select  placeholder="Seleccione la Urbanización" #singleSelect formControlName="urbanizationId">
+                <mat-option
+                  *ngFor="let element of listUrban" [value]="element.urbanizationId"
+                >
+                {{element.urbanization1}}
+              </mat-option>
+              </mat-select>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label fw-bold fs-5"
+              ><span class="required">Usuario</span></label
+            >
+            <div class="col-lg-8 fv-row">
+              <!--select class="form-select" id="autoSizingSelect" formControlName="userId">
+                <option selected >--- Seleccione el Usuario ---</option>
+                <option [value]="element.userId" *ngFor="let element of listUser">{{element.userName}}</option>
+              </!--select-->
+
+              <!--[formControl]="bankCtrl" placeholder="Bank" #singleSelect-->
+                <mat-select  placeholder="Seleccione el Usuario" formControlName="userId">
+                  
+                  <mat-option>
+                    <ngx-mat-select-search 
+                    [formControl]="bankFilterCtrl"
+                    ></ngx-mat-select-search>
+                  </mat-option>
+
+                  <mat-option
+                    *ngFor="let element of filteredBanks | async" [value]="element.userId">
+                  {{element.userName}}
+                </mat-option>
+                
+                </mat-select>
+              <!--input type="number" class="form-control form-control-lg form-control-solid" 
+                 formControlName="userId" / userName -->
+                 <!--input type="text"
+                 placeholder="Search for a street"
+                 [formControl]="bankFilterCtrl"
+                 class="form-control form-control-lg form-control-solid"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete-- #auto="matAutocomplete">
+            <mat-option *ngFor="let element of filteredBanks|async" [value]="element.userId">
+              {{element.userName}}
+            </mat-option>
+          </mat-autocomplete-->
+          
+               
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label fw-bold fs-5"
+              ><span class="required">Manzana</span></label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                formControlName="mz"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-5"
+              >Villa</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                formControlName="villa"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label fw-bold fs-5"
+              ><span class="required">Número de telefóno</span></label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                type="tel"
+                class="form-control form-control-lg form-control-solid"
+                formControlName="phoneNumber"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label fw-bold fs-5"
+              ><span class="required">Notas</span></label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                formControlName="notes"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-5"
+              >Dirección</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                formControlName="fullAddress"
+              /> 
+            </div>
+          </div>
+
+          <br />
+        </div>
+
+        
+        <div class="card-footer  py-6 px-5">
+          <!--div class="row justify-content-center">
+          <button type="submit" class="btn btn-primary"   
+        (click)="openDialogRegistrarUsuario()">Registrar Usuario</button>
+      </!--div-->
+      
+      <!--div class="d-flex justify-content-start">
+      <button type="submit" class="btn bg-dark text-white" 
+        (click)="openDialogRegistrarUsuario()">Registrar Usuario</button>
+      </!--div-->
+
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn bg-dark text-white" 
+        (click)="openDialogRegistrarUsuario()">Registrar Usuario</button>
+          <button
+            type="reset"
+            class="btn btn-light btn-active-light-primary me-2"
+            [mat-dialog-close]="false"
+          >
+            Cancelar
+          </button>
+      
+          <button
+            type="submit"
+            class="btn btn-primary" 
+            (click)="saveSettings()"
+          >
+            Guardar Cambios
+          </button></div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-------------------
+   <span>
+          <button type="submit" class="btn btn-primary" style="margin: 7px;" id="kt_account_profile_details_submit" 
+          (click)="openDialogRegistrarUsuario()">Registrar Usuario</button>
+   </span> 
+  ------------------>

@@ -1,0 +1,90 @@
+<div style="padding: 4em;">
+    <div class="card mb-5 mb-xl-10">
+        <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+          data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+          <div class="card-title m-0">
+            <h3 class="fw-bolder m-0 fs-5">Registro de Notificaciones</h3>
+          </div>
+        </div>
+        <div id="kt_account_profile_details" class="collapse show">
+          <form [formGroup]="form" (ngSubmit)="guardarNotificacion()" >
+            <div class="card-body border-top p-9">
+              
+              <br />
+
+
+              
+              <input type="hidden" formControlName="id">
+
+              <input type="hidden" formControlName="urbanizationId">
+
+              <div class="row mb-6" *ngIf="UrbanHabilitar">
+                <label class="col-lg-4 col-form-label required fw-bold fs-5"
+                  >Urbanización</label
+                >
+                <div class="col-lg-8 fv-row">
+                  <mat-select  placeholder="Seleccione la Urbanización" #singleSelect formControlName="urbanizationId">
+                    <mat-option
+                      *ngFor="let element of listUrban" [value]="element.urbanizationId"
+                    >
+                    {{element.urbanization1}}
+                  </mat-option>
+                  </mat-select>
+                </div>
+              </div>
+
+
+              <div class="row mb-6">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span
+                        class="required">Título</span></label>
+                <div class="col-lg-8 fv-row">
+                    <input type="tel" class="form-control form-control-lg form-control-solid"
+                        formControlName="titulo" />
+                </div>
+            </div>
+            <br />
+            <div class="row mb-6">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span
+                        class="required">Fecha y Hora</span></label>
+                <div class="col-lg-4 fv-row">
+                    <input type="date" class="form-control form-control-lg form-control-solid"
+                        formControlName="fechaEstablecida" />
+                </div>
+                <div class="col-lg-4 fv-row">
+                  <input type="time" class="form-control form-control-lg form-control-solid"
+                      formControlName="tiempo" />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row mb-6">
+                <label class="col-lg-4 col-form-label fw-bold fs-5"><span
+                        class="required">Notas</span></label>
+                <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea2" style="height: 350px;"
+                        formControlName="notas"></textarea>
+                </div>
+            </div>
+
+            <br />
+
+
+            <div class="card-footer d-flex justify-content-end py-6 px-5">
+                <button type="reset" class="btn btn-light btn-active-light-primary me-2"
+                [mat-dialog-close]="false">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit"
+                    >Guardar Cambios</button>
+            </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    

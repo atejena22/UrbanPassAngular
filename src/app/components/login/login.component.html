@@ -1,0 +1,42 @@
+<!--div class="body">
+      <div-- class="login">
+       <br>
+          <!--mat-spinner *ngIf="loading" class="spinner"></!--mat-spinner--   *ngIf="!loading">
+          
+          <form  [formGroup]="form" (ngSubmit)="ingresar()">
+              <img src="./assets/urbaniz.png" width="150%">
+
+              <div class="card" >
+          <h1>Login</h1>
+         
+          <mat-form-field class="ancho" appearance="fill">
+              <mat-label>Usuario</mat-label>
+              <input type="text" matInput autocomplete="off" formControlName="NombreUsuario">
+            </mat-form-field>
+          
+            <mat-form-field class="ancho" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput autocomplete="off" formControlName="password">
+            </mat-form-field>
+  
+            <br>
+            <button type="submit" class="ancho button" mat-flat-button color="primary" [disabled]="form.invalid">Acceder</button>
+            <br> <br> <br>
+          </div>
+          </form>       
+  </div-->
+
+  <div class="body"> 
+  <div class="login-page">
+    <img src="./assets/urbaniz.png" width="100%">
+    <div class="form">
+      <form class="login-form"  [formGroup]="form" (ngSubmit)="ingresar()">
+        <input type="text" placeholder="username" formControlName="userName"/>
+        <input type="password" placeholder="password" formControlName="password"/>
+        <button type="submit">login</button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+  

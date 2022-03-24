@@ -1,0 +1,88 @@
+.ancho{
+    width: 20%;
+}
+
+.button{
+    height: 50px;
+    background: linear-gradient(to right, #F6B668, #F48353);
+    background: linear-gradient(to right, #FCDF6B, #F99742);
+    background: linear-gradient(to right, #339CE9, #1D5BDF);
+    background: linear-gradient(to right, #1B1464);
+
+
+    /*background-color: rgb(#F6B668,#F48353, #FCDF6B,#F99742, #339CE9,#1D5BDF,#1B1464 );*/
+    color: white;
+    margin: 20px;
+}
+
+.buttonNegro{
+    height: 50px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
+
+.example-card {
+    max-width: 300%;
+    /*margin-left: auto;*/
+  }
+
+
+
+  /*
+  .col-form-label {
+    padding-top: calc(.75rem + 1px);
+    padding-bottom: calc(.75rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #3f4254;
+  }
+
+  .fs-6 {
+    font-size: 1.075rem !important;
+  }
+
+  .fw-bold {
+    font-weight: 500 !important;
+  }
+
+  .col-form-label {
+    padding-top: calc(.75rem + 1px);
+    padding-bottom: calc(.75rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #3f4254;
+  }
+
+ 
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+
+  .row > * {
+ 
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+  }
+  */
